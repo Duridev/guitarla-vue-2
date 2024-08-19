@@ -9,7 +9,7 @@
         guitarras.value = db
     })
     
-    const incrementar = () => {
+    const agregarCarrito = () => {
         alert('Diste Click')
     }
 
@@ -109,6 +109,7 @@
             <Guitarra 
                 v-for="guitarra in guitarras"
                 :guitarra="guitarra"
+                @agregar-carrito="agregarCarrito"
             />
 
         </div>
