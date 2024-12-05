@@ -30,7 +30,9 @@ const agregarCarrito = (guitarra) => {
 
         <div class="row mt-5">
 
-            <Guitarra v-for="guitarra in guitarras" :guitarra="guitarra" @agregar-carrito="agregarCarrito" />
+            <Guitarra v-for="guitarra in guitarras" 
+            :guitarra="guitarra" 
+            @agregar-carrito="agregarCarrito" />
 
         </div>
     </main>
