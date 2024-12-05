@@ -14,6 +14,7 @@ onMounted(() => {
 
 const agregarCarrito = (guitarra) => {
     carrito.value.push(guitarra)
+    guitarra.cantidad = 1;
 };
 
 </script>
