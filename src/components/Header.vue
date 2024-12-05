@@ -1,5 +1,11 @@
 
 <script setup>
+    const props = defineProps({
+        carrito: {
+            type: Array,
+            required: true
+        }
+    });
 
 </script>
 
@@ -20,8 +26,8 @@
                         <img class="img-fluid" src="/img/carrito.png" alt="imagen carrito" />
 
                         <div id="carrito" class="bg-white p-3">
-                            <p class="text-center">El carrito esta vacio</p>
-                            <table class="w-100 table">
+                            <p v-if="carrito.length === 0" class="text-center">El carrito esta vacio</p>
+                            <table v-if="carrito.length > 0" class="w-100 table">
                                 <thead>
                                     <tr>
                                         <th>Imagen</th>
