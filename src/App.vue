@@ -23,12 +23,22 @@ const agregarCarrito = (guitarra) => {
     }
 };
 
+const decrementarCantidad() => {
+    
+}
+
+const incrementarCantidad() => {
+    
+}
+
 </script>
 
 <template>
 
     <Header 
         :carrito="carrito"
+        @decrementar-cantidad="decrementarCantidad"
+        @incrementar-cantidad="incrementarCantidad"
     />
 
 
