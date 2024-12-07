@@ -15,7 +15,9 @@ import { computed } from 'vue';
 
     defineEmits(['decrementar-cantidad', 'incrementar-cantidad', 'agregar-carrito'])
 
-
+    const formatCurrency = (value) => {
+        return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value).replace('CLP', '').trim();
+    }
 
     const totalPagar = computed(() => {
         return props.carrito.reduce((total, producto) => total + (producto.cantidad * producto.precio), 0)
