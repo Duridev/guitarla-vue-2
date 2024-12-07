@@ -29,6 +29,10 @@ const eliminarCarrito = (id) => {
     carrito.value = carrito.value.filter(producto => producto.id !== id)
 }
 
+const vaciarCarrito = () => {
+    carrito.value = [];
+}
+
 const decrementarCantidad = (id) => {
     const index = carrito.value.findIndex(producto => producto.id === id);
     if(carrito.value[index].cantidad <= 1){
@@ -54,6 +58,7 @@ const incrementarCantidad = (id) => {
         @incrementar-cantidad="incrementarCantidad"
         @agregar-carrito="agregarCarrito"
         @eliminar-carrito="eliminarCarrito"
+        @vaciar-carrito="vaciarCarrito"
     />
 
 

@@ -13,7 +13,7 @@ import { computed } from 'vue';
         }
     });
 
-    defineEmits(['decrementar-cantidad', 'incrementar-cantidad', 'agregar-carrito', 'eliminar-carrito'])
+    defineEmits(['decrementar-cantidad', 'incrementar-cantidad', 'agregar-carrito', 'eliminar-carrito', 'vaciar-carrito'])
 
     const formatCurrency = (value) => {
         return new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(value).replace('CLP', '').trim();
@@ -103,7 +103,10 @@ import { computed } from 'vue';
                                 </table>
 
                                 <p class="text-end">Total pagar: <span class="fw-bold">{{ formatCurrency(totalPagar) }}</span></p>
-                                <button  class="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
+                                <button  
+                                    class="btn btn-dark w-100 mt-3 p-2"
+                                    @click="$emit('vaciar-carrito')"
+                                >Vaciar Carrito</button>
                             </div>
                         </div>
                     </div>
