@@ -117,7 +117,7 @@ import { computed } from 'vue';
                 <div class="col-md-6 text-center text-md-start pt-5">
                     <h1 class="display-2 fw-bold">Modelo {{ guitarraHeader.nombre }}</h1>
                     <p class="mt-5 fs-5 text-white">{{ guitarraHeader.descripcion }}</p>
-                    <p class="text-primary fs-1 fw-black">${{ guitarraHeader.precio }}</p>
+                    <p class="text-primary fs-1 fw-black">{{ formatCurrency(guitarraHeader.precio) }}</p>
                     <button 
                         type="button"
                         class="btn fs-4 bg-primary text-white py-2 px-5"
