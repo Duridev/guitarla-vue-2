@@ -4,10 +4,14 @@
         carrito: {
             type: Array,
             required: true
+        },
+        guitarraHeader: {
+            type: Object,
+            required: true
         }
     });
 
-    defineEmits(['decrementar-cantidad', 'incremnetar-cantidad'])
+    defineEmits(['decrementar-cantidad', 'incrementar-cantidad', 'agregar-carrito'])
 
 </script>
 
@@ -96,12 +100,13 @@
 
             <div class="row mt-5">
                 <div class="col-md-6 text-center text-md-start pt-5">
-                    <h1 class="display-2 fw-bold">Modelo VAI</h1>
-                    <p class="mt-5 fs-5 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus quibusdam dolor nemo velit quo, fuga omnis, iure molestias optio tempore sint at ipsa dolorum odio exercitationem eos inventore odit.</p>
-                    <p class="text-primary fs-1 fw-black">$399</p>
+                    <h1 class="display-2 fw-bold">Modelo {{ guitarraHeader.nombre }}</h1>
+                    <p class="mt-5 fs-5 text-white">{{ guitarraHeader.descripcion }}</p>
+                    <p class="text-primary fs-1 fw-black">${{ guitarraHeader.precio }}</p>
                     <button 
                         type="button"
                         class="btn fs-4 bg-primary text-white py-2 px-5"
+                        @click="$emit('agregar-carrito', guitarraHeader)"
                     >Agregar al Carrito</button>
                 </div>
             </div>
