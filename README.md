@@ -1,5 +1,21 @@
-# Vue 3 + Vite
+# GuitarLA
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+GuitarLA es una aplicación web creada con **Vue.js**, como parte del curso *"Aprende Vue.js Creando Proyectos Reales"* de **Juan de la Torre (Código con Juan)**. La app permite explorar un catálogo de guitarras, gestionar un carrito de compras y enviar un formulario de contacto.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Tecnologías y conceptos
+
+- **Componentes** y **Props**
+- **Custom Events** y **Emit**
+- **Directivas** (`v-for`, `v-bind`, `v-model`, etc.)
+- **Computed Properties** y **Watchers**
+- Formateo de precios en **peso chileno**
+
+## Características
+
+- Catálogo dinámico de guitarras.
+- Carrito de compras interactivo.
+- Formulario con validación.
+
+## Demo
+
+Accede a la aplicación desplegada aquí: [GuitarLA en Netlify](https://duridev-guitarla.netlify.app/)
